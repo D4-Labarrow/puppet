@@ -1,0 +1,55 @@
+# File managed by Puppet
+*nat
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+:PREROUTING ACCEPT [0:0]
+<% if @nat_rules != [] -%><% @nat_rules.each do |rule| -%>
+<%= rule %>
+<% end -%><% end -%>
+COMMIT
+
+*mangle
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+<% if @mangle_rules != [] -%><% @mangle_rules.each do |rule| -%>
+<%= rule %>
+<% end -%><% end -%>
+COMMIT
+
+*filter
+:INPUT <%= @default_input %> [0:0]
+:FORWARD <%= @default_forward %> [0:0]
+:OUTPUT <%= @default_output %> [0:0]
+-A INPUT -i lo -j ACCEPT
+-A INPUT -p icmp -m icmp --icmp-type 8 -m state --state NEW,RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+<% if @ssh_safe_mode -%>
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+<% end -%>
+<% if @allowall_interfaces != [] -%><% @allowall_interfaces.each do |int| -%>
+-A INPUT -i <%= int %> -j ACCEPT
+<% end -%><% end -%>
+<% if @allow_tcp_ports != [] -%><% @allow_tcp_ports.each do |port| -%>
+-A INPUT -p tcp --dport <%= port %> -j ACCEPT
+<% end -%><% end -%>
+<% if @allow_udp_ports != [] -%><% @allow_udp_ports.each do |port| -%>
+-A INPUT -p udp --dport <%= port %> -j ACCEPT
+<% end -%><% end -%>
+<% if @allow_ips != [] -%><% @allow_ips.each do |ip| -%>
+-A INPUT -s <%= ip %> -j ACCEPT
+<% end -%><% end -%>
+<% if @filter_rules != [] -%><% @filter_rules.each do |rule| -%>
+<%= rule %>
+<% end -%><% end -%>
+<% if @extra_rules != [] -%><% @extra_rules.each do |rule| -%>
+<%= rule %>
+<% end -%><% end -%>
+<% if @log_filter_defaults -%>
+-A INPUT -m limit --limit 2/min -j LOG --log-prefix "NETFILTER: Dropped "
+<% end -%>
+COMMIT
+

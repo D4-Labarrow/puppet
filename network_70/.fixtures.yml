@@ -1,0 +1,15 @@
+fixtures:
+  repositories:
+    "stdlib": "https://github.com/puppetlabs/puppetlabs-stdlib.git"
+    "vcsrepo": "https://github.com/puppetlabs/puppetlabs-vcsrepo.git"
+    "reboot": "https://github.com/puppetlabs/puppetlabs-reboot.git"
+    "tp": "https://github.com/example42/puppet-tp"
+    "tinydata": "https://github.com/example42/tinydata"
+    "prometheus": "https://github.com/voxpupuli/puppet-prometheus"
+    "systemd": "https://github.com/camptocamp/puppet-systemd"
+    "archive": "https://github.com/voxpupuli/puppet-archive"
+    "noop": "https://github.com/trlinkin/trlinkin-noop"
+    "rbenv": "https://github.com/justindowning/puppet-rbenv"
+    "hieradata": "https://github.com/example42/psick-hieradata"
+  symlinks:
+    "psick": "#{source_dir}"

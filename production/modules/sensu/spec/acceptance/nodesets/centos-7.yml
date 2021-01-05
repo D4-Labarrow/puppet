@@ -1,0 +1,38 @@
+HOSTS:
+  sensu-agent:
+    roles:
+      - agent
+      - sensu-agent
+    platform: el-7-x86_64
+    hypervisor: docker
+    image: centos:7
+    docker_preserve_image: true
+    docker_cmd:
+      - '/usr/sbin/init'
+    docker_image_commands:
+      - "sed -i -r '/^tsflags/d' /etc/yum.conf"
+      - 'yum install -y wget which iproute'
+    docker_container_name: 'sensu-agent-el7'
+  sensu-backend:
+    roles:
+      - agent
+      - sensu-backend
+      - puppetserver
+      - default
+    platform: el-7-x86_64
+    hypervisor: docker
+    image: centos:7
+    docker_preserve_image: true
+    docker_cmd:
+      - '/usr/sbin/init'
+    docker_image_commands:
+      - "sed -i -r '/^tsflags/d' /etc/yum.conf"
+      - 'yum install -y wget which initscripts iproute'
+    docker_container_name: 'sensu-backend-el7'
+CONFIG:
+  log_level: debug
+  type: foss
+ssh:
+  password: root
+  auth_methods: ["password"]
+

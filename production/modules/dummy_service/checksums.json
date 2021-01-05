@@ -1,0 +1,8 @@
+{
+  "README.md": "f51892c83770c244c09257e675d5d97e",
+  "examples/with_dummy.pp": "bd707fb22a0134a1af318980e205e8ef",
+  "examples/without_dummy.pp": "63ba7fb6698dc3c3e16d23967959f570",
+  "lib/puppet/provider/service/dummy.rb": "6dd0e9016312c34fb8926e64d92fe9c2",
+  "manifests/init.pp": "c7daf2aefc07a6eca3d31085f0af56de",
+  "metadata.json": "939b38a0b054590e23a6c1ad400e5526"
+}

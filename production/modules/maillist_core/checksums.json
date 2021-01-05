@@ -1,0 +1,17 @@
+{
+  "CHANGELOG.md": "2d6df59d84616d538ac4310c5d9d3133",
+  "Gemfile": "4da67a7fdfedfb41cc0f1c98040562ca",
+  "LICENSE": "86d3f3a95c324c9479bd8986968f4327",
+  "README.md": "cd67ed33a89316d1b07aa39fffab32f4",
+  "Rakefile": "ec7211984f6a353d074ecac728e84b83",
+  "appveyor.yml": "f311f30afa1475cc429f0d114aafd921",
+  "lib/puppet/provider/maillist/mailman.rb": "50eca6a24a753dc60607c7566bf36ae0",
+  "lib/puppet/type/maillist.rb": "381c19b02a431d84ac47f43862dbe0d3",
+  "locales/config.yaml": "093454e3bf32f7f8eda353e768404132",
+  "locales/puppetlabs-maillist_core.pot": "7afe4cc73361e354a97d4565fc2aad70",
+  "metadata.json": "4d1710d11d7f283443c9e675b059155c",
+  "spec/default_facts.yml": "d4442f09ee2f33f2d55f078d0ee2634f",
+  "spec/spec_helper.rb": "fd4bb1cb211ead965004139598dc7c80",
+  "spec/spec_helper_local.rb": "ecb512257c5d0939c518858a1c0b74dc",
+  "spec/unit/type/maillist_spec.rb": "7177b003f60fe3d8d42c12230b9f8a16"
+}

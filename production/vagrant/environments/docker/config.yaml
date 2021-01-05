@@ -1,0 +1,51 @@
+---
+# Default settings for vms
+vm:
+  memory: 1024
+  cpu: 1
+  box: centos7 # From boxes list below
+  puppet_apply: true
+  puppet_agent: false
+  synced_folder_type: vboxfs   # Sync folders types: nfs, vboxfs
+
+network:
+  range: 10.42.42.0/24
+  ip_start_offset: 101
+  domain: docker.psick.io
+
+vagrant:
+  hostmanager.enable: false # If to enable hostmanager plugin
+  hostmanager.manage_host: false # If to manage also the main host's hosts
+  multi_user: false
+  vm_provider: docker
+  docker_image: puppet/puppet-agent-ubuntu
+
+puppet:
+  version: latest
+  env: devel
+  zone: docker
+#  master_hostname: dev-local-puppet-01
+
+# Nodes shown in vagrant status 
+nodes:
+  - role: git
+    count: 1
+    memory: 2048
+  - role: ci
+    count: 1
+    memory: 2048
+  - role: compilemaster
+    count: 1
+    memory: 2048
+  - role: puppet_db
+    hostname_base: puppet-db
+    count: 1
+  - role: puppet_mom
+    hostname_base: puppet-mom
+    count: 1
+    memory: 4096
+    ip_address: 10.42.42.10
+    puppet_apply: true
+    aliases:
+      - puppet
+

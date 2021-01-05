@@ -1,0 +1,11 @@
+{
+  "description": "Install Puppet agent on a node",
+  "supports_noop": false,
+  "input_method": "environment",
+  "parameters": {
+    "breed": {
+      "description": "What 'breed', or flavour of operatingsystem we're installing (defaults to linux)",
+      "type": "Optional[Enum['solaris','darwin','linux','bsd','cygwin','msys','win']]"
+    }
+  }   
+}

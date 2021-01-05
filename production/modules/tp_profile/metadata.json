@@ -1,0 +1,99 @@
+{
+  "name": "example42-tp_profile",
+  "version": "0.2.1",
+  "author": "Alessandro Franceschi",
+  "summary": "This module provides profiles to install applications via tp (Tiny Puppet)",
+  "license": "Apache-2.0",
+  "source": "https://github.com/example42/puppet-tp_profile",
+  "project_page": "https://github.com/example42/puppet-tp_profile",
+  "issues_url": "https://github.com/example42/puppet-tp_profile/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.2.0 < 7.0.0"
+    },
+    {
+      "name": "trlinkin/noop",
+      "version_requirement": ">= 1.0.0 < 2.0.0"
+    },
+    {
+      "name": "example42/tinydata",
+      "version_requirement": ">= 0.3.0 < 5.0.0"
+    },
+    {
+      "name": "example42/tp",
+      "version_requirement": ">= 2.4.0 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8",
+        "9",
+        "10"      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04",
+        "14.10",
+        "15.04",
+        "15.10",
+        "16.04",
+        "16.10",
+        "17.04",
+        "17.10",
+        "18.04",
+        "18.10",
+        "19.04",
+        "19.10",
+        "20.04"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [
+        "15"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "pdk-version": "1.13.0",
+  "template-url": "https://github.com/example42/pdk-module-template-tp-profile-minimal-tests#master",
+  "template-ref": "heads/master-0-g8170554"
+}

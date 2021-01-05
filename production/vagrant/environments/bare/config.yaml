@@ -1,0 +1,108 @@
+---
+# Default settings for vms
+vm:
+  memory: 512
+  cpu: 1
+  role: ostest
+  puppet_apply: false
+  puppet_agent: false
+  facter_external_facts: false
+  facter_trusted_facts: false
+  synced_folder_type: vboxfs    # Sync folders types: nfs, vboxfs
+
+network:
+  range: 10.42.40.0/24
+  ip_start_offset: 101
+  domain: bare
+
+# Vagrant settings
+vagrant:
+  # Update host's /etc/hosts if you have the hostmanager plugin.
+  # Needed for automatic decommissioning of nodes. If false, you've to manage
+  # manually ssl certs removal of reinstalled nodes.
+  hostmanager.manage_host: false # If true and you have the hostmanager plugin
+
+puppet:
+  version: latest
+  env: devel
+  zone: bare
+  setup: false
+
+vbguest:
+  auto_update: false
+
+# Nodes shown in vagrant status 
+nodes:
+  - hostname_base: redhat8
+    box: rhel8
+  - hostname_base: redhat7
+    box: rhel7
+  - hostname_base: centos8
+    box: centos8
+  - hostname_base: centos7
+    box: centos7
+  - hostname_base: centos6
+    box: centos6
+  - hostname_base: oracle8
+    box: oracle8
+  - hostname_base: oracle8
+    box: oracle8
+  - hostname_base: ubuntu1910
+    box: ubuntu1910
+  - hostname_base: ubuntu1804
+    box: ubuntu1804
+  - hostname_base: ubuntu1604
+    box: ubuntu1604 
+  - hostname_base: ubuntu1404
+    box: ubuntu1404 
+  - hostname_base: ubuntu1204
+    box: ubuntu1204 
+  - hostname_base: debian10
+    box: debian10
+  - hostname_base: debian9
+    box: debian9
+  - hostname_base: debian8
+    box: debian8
+  - hostname_base: debian7
+    box: debian7
+  - hostname_base: suse12
+    box: suse12
+  - hostname_base: suse11
+    box: suse11
+  - hostname_base: opensuse15
+    box: opensuse15
+  - hostname_base: alpine310
+    box: alpine310
+  - hostname_base: fedora30
+    box: fedora30
+  - hostname_base: fedora29
+    box: fedora29
+  - hostname_base: windows2012
+    fqdn: windows2012-bare
+    box: windows2012
+    forwarded_port:
+      guest: 3389
+      host: 33891
+  - hostname_base: windows2008
+    fqdn: windows2008-bare
+    box: windows2008
+    forwarded_port:
+      guest: 3389
+      host: 33892
+  - hostname_base: solaris11
+    box: solaris11
+  - hostname_base: solaris10
+    box: solaris10
+  - hostname_base: freebsd12
+    box: freebsd12
+  - hostname_base: freebsd11
+    box: freebsd11
+  - hostname_base: freebsd10
+    box: freebsd10
+  - hostname_base: osx1011
+    box: osx1011
+    vagrant_mount: false
+  - hostname_base: osx1010
+    box: osx1010
+    vagrant_mount: false
+

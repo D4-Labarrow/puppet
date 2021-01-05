@@ -1,0 +1,134 @@
+{
+  "name": "example42-tp",
+  "version": "3.0.0",
+  "author": "Example42 Gmbh",
+  "summary": "Tiny Puppet",
+  "license": "Apache-2.0",
+  "source": "https://github.com/example42/puppet-tp",
+  "project_page": "https://github.com/example42/puppet-tp",
+  "issues_url": "https://github.com/example42/puppet-tp/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.2.0 < 8.0.0"
+    },
+    {
+      "name": "example42/tinydata",
+      "version_requirement": ">= 0.0.1 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Darwin",
+      "operatingsystemrelease": [
+        "17"
+      ]
+    },
+    {
+      "operatingsystem": "Windows",
+      "operatingsystemrelease": [
+        "Server 2008 R2",
+        "Server 2012 R2",
+        "Server 2019"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [
+        "11 SP1",
+        "12"
+      ]
+    },
+    {
+      "operatingsystem": "CumulusLinux",
+      "operatingsystemrelease": [
+        "3.0.0",
+        "3.1.0",
+        "3.2.0"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04",
+        "16.04",
+        "18.04",
+        "20.04"
+      ]
+    },
+    {
+      "operatingsystem": "Solaris",
+      "operatingsystemrelease": [
+        "11"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.9.0 < 8.0.0"
+    }
+  ],
+  "checksums": {
+  },
+  "optional_dependencies": [
+    {
+      "name": "puppetlabs/chocolatey",
+      "version_requirement": ">= 0.0.1 < 5.0.0"
+    },
+    {
+      "name": "puppetlabs/vcsrepo",
+      "version_requirement": ">= 0.0.1 < 5.0.0"
+    },
+    {
+      "name": "puppetlabs/concat",
+      "version_requirement": ">= 0.0.1 < 5.0.0"
+    }
+  ],
+  "pdk-version": "1.11.0",
+  "template-url": "https://github.com/example42/pdk-module-template-tp-profile-minimal-tests#master",
+  "template-ref": "heads/master-0-g3e97c52"
+}

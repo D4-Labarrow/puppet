@@ -1,0 +1,19 @@
+{
+  "CHANGELOG.md": "2fb93eab8e093cd9e17161b0abb29c43",
+  "Gemfile": "d1ffad61b18df923099d0672b3fa98d3",
+  "LICENSE": "86d3f3a95c324c9479bd8986968f4327",
+  "README.md": "19bbaadff1e7e5ce1ffff8609ad346a6",
+  "REFERENCE.md": "32fccdfa89afe8480518865edb353c23",
+  "Rakefile": "5d8e4cae0fbd65b3b3e3ca59e759182b",
+  "lib/puppet/provider/k5login/k5login.rb": "43674f711ce010ce85bc87cd43961df9",
+  "lib/puppet/type/k5login.rb": "b0b093b05ebe4992d4f65232c74e889b",
+  "locales/config.yaml": "ff9081a4d3726ad9f0331a5dd3a88b66",
+  "locales/puppetlabs-k5login_core.pot": "a38a9a5a39f6c95113c8441c409a2486",
+  "metadata.json": "8bcfa4da806b7e06ddb12a765930aca4",
+  "spec/default_facts.yml": "d4442f09ee2f33f2d55f078d0ee2634f",
+  "spec/lib/puppet_spec/files.rb": "743abd494a62b140c7489ea69696d9f0",
+  "spec/spec_helper.rb": "a0540643c8838d5b6677f18e7d5423ea",
+  "spec/spec_helper_local.rb": "b5188e1e4c9921fa6e87e6f364a63494",
+  "spec/unit/provider/k5login_spec.rb": "9189a958a41b105443d108caa6f14d8a",
+  "spec/unit/type/k5login_spec.rb": "ca98afe70cdf6de680877a5b72a2cb99"
+}

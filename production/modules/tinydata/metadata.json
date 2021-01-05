@@ -1,0 +1,84 @@
+{
+  "name": "example42-tinydata",
+  "version": "0.4.3",
+  "author": "Alessandro Franceschi",
+  "summary": "Tiny Puppet Data",
+  "license": "Apache-2.0",
+  "source": "https://github.com/example42/tinydata",
+  "project_page": "https://github.com/example42/tinydata",
+  "issues_url": "https://github.com/example42/tinydata/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [
+        "11 SP1",
+        "12"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "12.04",
+        "14.04",
+        "16.04",
+        "18.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 8.0.0"
+    }
+  ],
+  "checksums": {
+  },
+  "pdk-version": "1.14.0",
+  "template-url": "https://github.com/puppetlabs/pdk-templates#1.10.0",
+  "template-ref": "tags/1.10.0-0-gbba9ac3"
+}

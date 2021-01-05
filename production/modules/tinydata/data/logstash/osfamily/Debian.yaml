@@ -1,0 +1,4 @@
+---
+logstash::settings:
+  init_file_path: '/etc/default/logstash'
+

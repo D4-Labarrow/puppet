@@ -1,0 +1,128 @@
+# This file is not used in hiera lookups.
+# Take it as reference of the namespace for all the available
+# parameters on this psick with their default values.
+
+---
+# psick::backup::legato
+psick::backup::legato::packages: []
+
+# psick::firewall::iptables
+psick::firewall::iptables::package_name: 'iptables'
+psick::firewall::iptables::service_name: 'iptables'
+psick::firewall::iptables::config_file_path: '/etc/sysconfig/iptables'
+
+# psick::gitlab::cli
+psick::gitlab::cli::ensure: 'present'
+psick::gitlab::cli::auto_prereq: true
+psick::gitlab::cli::template: 'psick/gitlab/cli/gitlab-cli.conf.epp'
+psick::gitlab::cli::config_hash:
+  project_id: ''
+  private_token: ''
+  api_endpoint: "https://gitlab.%{facts.domain}/api/v3"
+  httparty_options: '{verify: false}'
+  assigned_user: ''
+  milestone: ''
+  labels: 'automerge'
+  add_target_label: false
+  add_source_label: false
+  prefix_target_label: 'TO_'
+  prefix_source_label: 'FROM_'
+
+# psick::hardening::packages
+psick::hardening::packages::packages_to_remove: []
+psick::hardening::packages::packages_default: []
+psick::hardening::services::services_to_remove: []
+psick::hardening::services::services_default: []
+
+# psick::hardware::hp
+psick::hardware::hp::packages: []
+
+# psick::hosts::resource
+psick::hosts::resource::hosts: {}
+psick::hosts::resource::defaults: {}
+psick::hosts::resource::use_defaults: true
+
+# psick::monitor::ganglia
+psick::monitor::ganglia::packages: []
+
+# psick::monitor::snmpd
+psick::monitor::snmpd::extra_packages: []
+
+# psick::packages
+psick::packages::packages_default: []
+
+# psick::pre::darwin
+psick::pre::darwin::manage: true
+psick::pre::darwin::proxy_class: ''
+psick::pre::darwin::repo_class: ''
+
+# psick::pre::linux
+psick::pre::linux::manage: true
+psick::pre::linux::rpmgpg_class: ''
+psick::pre::linux::rhn_class: ''
+psick::pre::linux::repo_class: ''
+psick::pre::linux::proxy_class: ''
+
+# psick::pre::solaris
+psick::pre::solaris::manage: true
+psick::pre::solaris::proxy_class: ''
+psick::pre::solaris::repo_class: ''
+
+# psick::pre::windows
+psick::pre::windows::manage: true
+psick::pre::windows::proxy_class: ''
+psick::pre::windows::repo_class: ''
+
+# psick::proxy
+psick::proxy::ensure: present
+psick::proxy::configure_gem: true
+psick::proxy::configure_puppet_gem: true
+psick::proxy::configure_pip: true
+psick::proxy::configure_system: true
+psick::proxy::configure_repo: true
+psick::proxy::force: false
+# This is set as class param as here it fails since String is returned
+# psick::proxy::proxy_server: "%{lookup('::psick::proxy_server')}"
+
+# psick::puppet::pe_agent
+psick::puppet::pe_agent::test_enable: false
+psick::puppet::pe_agent::settings: {}
+
+# psick::repo::generic
+psick::repo::generic::add_defaults: true
+psick::repo::generic::yum_resource: yumrepo     # As native resource type
+psick::repo::generic::apt_resource: apt::source # As in puppetlabs-apt
+psick::repo::generic::zypper_resource: zypprepo # As in darin-zypprepo
+        
+# psick
+psick::is_cluster: false
+psick::primary_ip_address: ''
+psick::mgmt_interface: "%{facts.networking.primary}"
+psick::timezone: ''
+psick::proxy_server: ~
+
+# psick::time
+psick::time::servers: []
+psick::time::method: 'ntpdate'
+psick::time::timezone: ~
+
+# psick::windows::features
+psick::windows::features::install: {}
+psick::windows::features::defaults: {}
+psick::windows::features::use_defaults: true
+
+# psick::windows::services
+psick::windows::services::managed: {}
+psick::windows::services::defaults: {}
+psick::windows::services::use_defaults: true
+
+        # psick::windows::registry
+psick::windows::registry::keys: {}
+psick::windows::registry::defaults: {}
+psick::windows::registry::use_defaults: true
+
+# psick::time::windows
+# psick::time::windows::ntp_servers: %{lookup('psick::time::servers')}
+# psick::time::windows::timezone: %{lookup('psick::time::timezone')}
+psick::time::windows::fallback_servers: []
+

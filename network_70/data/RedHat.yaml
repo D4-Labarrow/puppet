@@ -1,0 +1,19 @@
+psick::linux::pre_classes:
+  'repo': '::psick::repo'
+
+psick::monitor::snmpd::extra_packages:
+  - 'net-snmp-conf-dtnp'
+  - 'net-snmp-utils'
+
+psick::monitor::ganglia::packages:
+  - 'ganglia-gmond'
+  - 'ganglia-gmond-modules-python'
+  - 'libganglia-3_1_0'
+
+psick::ruby::buildgems::packages:
+  - 'make'
+  - 'cmake'
+  - 'gcc'
+  - 'gcc-c++'
+  - 'ruby-devel'
+  - 'zlib-devel'
